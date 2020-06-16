@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Login from '../views/Login.vue'
 import Main from '../views/Main.vue'
 import CategoryEdit from '../views/CategoryEdit.vue'
 import CategoryList from '../views/CategoryList.vue'
@@ -16,13 +17,17 @@ import ArticleList from '../views/ArticleList.vue'
 import AdEdit from '../views/AdEdit.vue'
 import AdList from '../views/AdList.vue'
 
+import AdminUserEdit from '../views/AdminUserEdit.vue'
+import AdminUserList from '../views/AdminUserList.vue'
+
 Vue.use(VueRouter)
 
 const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
 }
-  const routes = [
+const routes = [
+  {path: '/login', name: 'Login', component: Login, meta: {isPublic: true}},
   {
     path: '/',
     name: 'Main',
@@ -31,7 +36,7 @@ VueRouter.prototype.push = function push(location) {
       { path: '/categories/create', component: CategoryEdit },
       { path: '/categories/list', component: CategoryList },
       { path: '/categories/edit/:id', component: CategoryEdit, props: true },
-      
+
       { path: '/items/create', component: ItemEdit },
       { path: '/items/list', component: ItemList },
       { path: '/items/edit/:id', component: ItemEdit, props: true },
@@ -39,7 +44,7 @@ VueRouter.prototype.push = function push(location) {
       { path: '/heros/create', component: HeroEdit },
       { path: '/heros/list', component: HeroList },
       { path: '/heros/edit/:id', component: HeroEdit, props: true },
-      
+
       { path: '/articles/create', component: ArticleEdit },
       { path: '/articles/list', component: ArticleList },
       { path: '/articles/edit/:id', component: ArticleEdit, props: true },
@@ -47,6 +52,10 @@ VueRouter.prototype.push = function push(location) {
       { path: '/ads/create', component: AdEdit },
       { path: '/ads/list', component: AdList },
       { path: '/ads/edit/:id', component: AdEdit, props: true },
+
+      { path: '/admin_users/create', component: AdminUserEdit },
+      { path: '/admin_users/list', component: AdminUserList },
+      { path: '/admin_users/edit/:id', component: AdminUserEdit, props: true },
     ]
   },
 
@@ -62,6 +71,12 @@ VueRouter.prototype.push = function push(location) {
 
 const router = new VueRouter({
   routes
+})
+router.beforeEach((to, from, next) => {
+  if (!to.meta.isPublic && !localStorage.token){
+    return next('/login')
+  }
+  next()
 })
 
 export default router
