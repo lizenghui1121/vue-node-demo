@@ -175,7 +175,7 @@ module.exports = app => {
         video.categories = [category]
         return video
       })
-      // 录入英雄
+      // 录入视频
       await Video.insertMany(cat.videos)
     }
     res.send(await Video.find())
