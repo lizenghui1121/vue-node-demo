@@ -10,14 +10,15 @@
           <i style="margin-right:0.2rem;" class="el-icon-plus"></i>添加广告
         </el-button>
         <el-row type="flex" style="flex-wrap: wrap">
-          <el-col :md=24 v-for="(item, index) in model.items" :key="index">
+          <el-col :md="24" v-for="(item, index) in model.items" :key="index">
             <el-form-item label="跳转链接(URL)">
               <el-input v-model="item.url"></el-input>
             </el-form-item>
             <el-form-item label="图片" style="margin-top:0.5rem">
               <el-upload
                 class="avatar-uploader"
-                :action="$http.defaults.baseURL + '/upload'"
+                :action="uploadUrl"
+                :headers="getAuthHeaders()"
                 :show-file-list="false"
                 :on-success="res => $set(item, 'image', res.url)"
               >

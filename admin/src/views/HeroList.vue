@@ -14,7 +14,7 @@
           <!-- <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button> -->
           <el-button
             type="text"
-            @click="$router.push(`/heros/edit/${scope.row._id}`)"
+            @click="$router.push(`/heroes/edit/${scope.row._id}`)"
             size="small"
           >编辑</el-button>
           <el-button
@@ -37,8 +37,9 @@ export default {
   },
   methods: {
     getCategoryList() {
-      this.$http.get("rest/heros").then(res => {
+      this.$http.get("rest/heroes").then(res => {
         this.items = res.data;
+        console.log(this.items)
       });
     },
     remove(row) {
@@ -47,7 +48,7 @@ export default {
           cancelButtonText: '取消',
           type: 'warning'
         }).then(() => {
-          this.$http.delete(`rest/heros/${row._id}`).then(res => {
+          this.$http.delete(`rest/heroes/${row._id}`).then(res => {
             console.log(res)
             if(res.data.success){
               this.getCategoryList()

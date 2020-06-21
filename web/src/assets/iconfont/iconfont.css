@@ -1,0 +1,33 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1592489267151'); /* IE9 */
+  src: url('iconfont.eot?t=1592489267151#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAPUAAsAAAAACKQAAAOIAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDKgqESINjATYCJAMUCwwABCAFhG0HSRtoBxEVnG/IPhLjGMr/bYklFjdBiLlsZMtZtz0EhCf/sjUdY1uEiTCdspblp/+R/+700rDO4zRKISRCcnAs9TPB8vzDJSPom3objwc0oKimCc42jRS1qYBn0+n3YF8MAaJJQy6kUpVajfAo6lYCSK/uXdvjIza0gCl4Y5BxoCLzcHgz3dwC5jqvLz8pIB4MzqLuWK9L5U6U+xJ8SWvHheNoZTlY250HkA8DC+QCFKRHpq8T1svlwhL9qVSKAV7zGOiqkOBL2jAUUGkUS9F54R8eKAbBggSojbEAKMd5hS+BIQv0CWDBQJ8GFgT6tNBzrGh3QDQQA2wBvqFSUrGiwSHYQGLFik2EUrHOMrRBp84Nu3S1T782ffy58aNPjZ58cSVhMdRN8Mbaj98ZE3vm9nHbomPN2IF84pGPGu173OjIhbQbMzxpkn5cslWVDz9O9bhxYzrpkvFJnz5t8uRp06fvG2/fz6PGy3dlulWrEf6YjOOfNj2aIs3KFC2PPEiz9mHRw/dTr7rX/hH5t5szqps5szU+xunzdOmeq9haoM8FRPLwzbhxb5pq5QV6k8tMvtjxYw8ydCl4ujmh50Th97+mRE9KXTTp8Ho535p8JXJOSzsrTkyqFNlSXS5WPratFKkab/HCBtPb/0wdm1Z6PNIyGHR116K029IXatukb5GiaeSW3PTDWhy6Oqlp7OmuXO5CORrWTphckydUbiXfNz1Fiun71i2Pjl4ewR5dB1nR42gGQNje/DdvIdxjX9mhAHaFfL35X8OwWwk/t41b6o+PUQBexl9S0GkJ2yt2HNxBeWX5rZZXHNKvUrU7ffcbsnfAUfZEbWGAaKKBW1yCBLzpxpC4cgYEH5HLYIiQGiyeTEjF5gJHDIUgwFMWoslJ1cNjSGiGGSMaBeTgTSDE4wOGOJwFSzy+SMX+wJGEPwTEkzFE00TWJ4whixSrDaMStKBfUBhqne6Uldt8RH+rFYeVDuuK3BdJSMI4Xjxgi9zFLv3dpyIOHFMDe7oc1jVBx1SikTAX6bIocllPFBpqBisqwiAKAbEAmhdAgYFocdbiwirx8kcQz40aBRcM/IheQZieYvlAQkhcAXnQtZUGTuUxPXc8KYLgABwM0QDsyYPUWo4Auuz1ShCDEJI3yHRkRDzOVdWFwxuac7wEiEa9uxMjVlScBGgHZapJg+1taRTbIEemadibDAY=') format('woff2'),
+  url('iconfont.woff?t=1592489267151') format('woff'),
+  url('iconfont.ttf?t=1592489267151') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1592489267151#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-back:before {
+  content: "\e61e";
+}
+
+.icon-menu:before {
+  content: "\e612";
+}
+
+.icon-card-hero:before {
+  content: "\e61f";
+}
+
+.icon-menu1:before {
+  content: "\e606";
+}
+

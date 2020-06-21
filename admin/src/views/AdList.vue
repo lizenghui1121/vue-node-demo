@@ -34,6 +34,7 @@ export default {
     getCategoryList() {
       this.$http.get("rest/ads").then(res => {
         this.items = res.data;
+        console.log(this.items)
       });
     },
     remove(row) {

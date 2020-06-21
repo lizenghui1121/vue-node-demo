@@ -20,6 +20,18 @@ import AdList from '../views/AdList.vue'
 import AdminUserEdit from '../views/AdminUserEdit.vue'
 import AdminUserList from '../views/AdminUserList.vue'
 
+import SkillEdit from '../views/SkillEdit.vue'
+import SkillList from '../views/SkillList.vue'
+
+import MingwenEdit from '../views/MingwenEdit.vue'
+import MingwenList from '../views/MingwenList.vue'
+
+import VideoEdit from '../views/VideoEdit.vue'
+import VideoList from '../views/VideoList.vue'
+
+import StrategyEdit from '../views/StrategyEdit.vue'
+import StrategyList from '../views/StrategyList.vue'
+
 Vue.use(VueRouter)
 
 const originalPush = VueRouter.prototype.push
@@ -41,9 +53,9 @@ const routes = [
       { path: '/items/list', component: ItemList },
       { path: '/items/edit/:id', component: ItemEdit, props: true },
 
-      { path: '/heros/create', component: HeroEdit },
-      { path: '/heros/list', component: HeroList },
-      { path: '/heros/edit/:id', component: HeroEdit, props: true },
+      { path: '/heroes/create', component: HeroEdit },
+      { path: '/heroes/list', component: HeroList },
+      { path: '/heroes/edit/:id', component: HeroEdit, props: true },
 
       { path: '/articles/create', component: ArticleEdit },
       { path: '/articles/list', component: ArticleList },
@@ -56,6 +68,23 @@ const routes = [
       { path: '/admin_users/create', component: AdminUserEdit },
       { path: '/admin_users/list', component: AdminUserList },
       { path: '/admin_users/edit/:id', component: AdminUserEdit, props: true },
+
+      { path: '/skills/create', component: SkillEdit },
+      { path: '/skills/list', component: SkillList },
+      { path: '/skills/edit/:id', component: SkillEdit, props: true },
+
+      { path: '/mingwens/create', component: MingwenEdit },
+      { path: '/mingwens/list', component: MingwenList },
+      { path: '/mingwens/edit/:id', component: MingwenEdit, props: true },
+
+      { path: '/videos/create', component: VideoEdit },
+      { path: '/videos/list', component: VideoList },
+      { path: '/videos/edit/:id', component: VideoEdit, props: true },
+
+      { path: '/strategies/create', component: StrategyEdit },
+      { path: '/strategies/list', component: StrategyList },
+      { path: '/strategies/edit/:id', component: StrategyEdit, props: true },
+
     ]
   },
 
