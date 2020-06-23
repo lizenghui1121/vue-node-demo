@@ -50,8 +50,8 @@ export default {
 
 <style>
 .resistry-card {
+  max-width: 22rem;
   min-width: 15rem;
-  max-width: 25rem;
   margin: 10rem auto;
 }
 </style>

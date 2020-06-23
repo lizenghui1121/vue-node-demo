@@ -2,7 +2,7 @@
   <div>
     <h1>铭文列表</h1>
     <el-table :data="items">
-      <el-table-column prop="_id" label="ID" width="230"></el-table-column>
+      <el-table-column prop="_id" label="ID"></el-table-column>
       <el-table-column prop="name" label="铭文名称"></el-table-column>
       <el-table-column prop="icon" label="图标">
         <template slot-scope="scope">

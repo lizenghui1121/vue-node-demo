@@ -2,7 +2,7 @@
   <div>
     <h1>召唤师技能列表</h1>
     <el-table :data="items">
-      <el-table-column prop="_id" label="ID" width="230"></el-table-column>
+      <el-table-column prop="_id" label="ID"></el-table-column>
       <el-table-column prop="name" label="技能名称"></el-table-column>
       <el-table-column prop="icon" label="图标">
         <template slot-scope="scope">

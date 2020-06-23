@@ -140,7 +140,7 @@
         <el-tab-pane label="加点建议" name="skillSuggest">
           <el-row type="flex" style="flex-wrap: wrap">
             <el-col :md="12">
-              <h2>主升</h2>
+              <sapn>主升</sapn>
               <el-form-item label="名称">
                 <el-input v-model="model.name"></el-input>
               </el-form-item>
@@ -158,7 +158,7 @@
               </el-form-item>
             </el-col>
             <el-col :md="12">
-              <h2>副升</h2>
+              <span>副升</span>
               <el-form-item label="名称">
                 <el-input v-model="model.title"></el-input>
               </el-form-item>

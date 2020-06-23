@@ -53,10 +53,10 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .login-card {
   min-width: 15rem;
-  max-width: 25rem;
+  max-width: 22rem;
   margin: 10rem auto;
 }
 </style>

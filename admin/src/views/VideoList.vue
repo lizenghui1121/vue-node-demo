@@ -2,7 +2,7 @@
   <div>
     <h1>视频列表</h1>
     <el-table :data="items">
-      <el-table-column prop="_id" label="ID" width="230"></el-table-column>
+      <el-table-column prop="_id" label="ID"></el-table-column>
       <el-table-column prop="title" label="视频标题"></el-table-column>
       <el-table-column prop="image" label="图标">
         <template slot-scope="scope">

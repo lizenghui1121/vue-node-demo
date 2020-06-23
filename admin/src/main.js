@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import './plugins/element.js'
 import router from './router'
-
+import 'element-ui/lib/theme-chalk/display.css';
 import './style.css'
 
 Vue.config.productionTip = false
