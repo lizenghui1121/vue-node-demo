@@ -204,6 +204,13 @@
 .el-aside {
   color: #333;
 }
+.el-drawer__body {
+   overflow: auto;
+}
+/*2.隐藏滚动条，太丑了*/
+.el-drawer__container ::-webkit-scrollbar{
+    display: none;
+}
 </style>
 
 <script>

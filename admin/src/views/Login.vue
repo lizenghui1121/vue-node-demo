@@ -37,7 +37,7 @@ export default {
       this.$http.post("login", this.model).then(res => {
         localStorage.token = res.data.token;
         localStorage.userId = res.data.id;
-        localStorage.currentUser = this.model.username
+        localStorage.currentUser = this.model.username;
         this.$router.push("/");
         this.$message({
           type: "success",
@@ -46,9 +46,8 @@ export default {
       });
     },
     registry() {
-      this.$router.push('/registry')
-    },
-
+      this.$router.push("/registry");
+    }
   }
 };
 </script>
@@ -58,5 +57,12 @@ export default {
   min-width: 15rem;
   max-width: 22rem;
   margin: 10rem auto;
+}
+@media screen and (max-width: 768px) {
+  .login-card {
+    min-width: 15rem;
+    max-width: 22rem;
+    margin: 5rem auto;
+  }
 }
 </style>

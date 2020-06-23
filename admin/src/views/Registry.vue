@@ -54,4 +54,11 @@ export default {
   min-width: 15rem;
   margin: 10rem auto;
 }
+@media screen and (max-width: 768px) {
+  .resistry-card {
+    min-width: 15rem;
+    max-width: 22rem;
+    margin: 5rem auto;
+  }
+}
 </style>
