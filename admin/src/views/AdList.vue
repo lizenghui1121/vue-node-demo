@@ -2,7 +2,7 @@
   <div>
     <h1>广告位列表</h1>
     <el-table :data="items">
-      <el-table-column class="hidden-xs-only" style="display:none" prop="_id" label="ID"></el-table-column>
+      <el-table-column v-if="!isMobie" prop="_id" label="ID"></el-table-column>
       <el-table-column prop="name" label="名称"></el-table-column>
       <el-table-column fixed="right" label="操作" width="100">
         <template slot-scope="scope">
@@ -41,7 +41,7 @@ export default {
       this.$confirm(`是否确定删除"${row.name}"`, '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
-          type: 'warning'
+          type: 'warning',
         }).then(() => {
           this.$http.delete(`rest/ads/${row._id}`).then(res => {
             console.log(res)

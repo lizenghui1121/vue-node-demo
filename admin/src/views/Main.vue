@@ -242,7 +242,7 @@ export default {
     }
   },
   mounted() {
-    this.$router.push('/items/list');
+    this.$router.push("/items/list");
   }
 };
 </script>
