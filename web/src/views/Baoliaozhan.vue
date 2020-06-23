@@ -44,7 +44,7 @@
         <div class="my-3 mx-3">
           <img
             class="mb-3 w-100"
-            style="height:191.5px;"
+            style="height:191.5px;min-width:320px;"
             :src="banner.icon"
             alt
           />
