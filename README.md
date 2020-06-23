@@ -1,6 +1,7 @@
 # vue-node-demo
 Vue.js+Node.js+Element-ui实现仿王者荣耀手机端官网
-
+- web端demo：[点击访问demo](101.200.226.252)
+- 后台demo：[点击访问demo](101.200.226.252/admin)
 # 1.环境安装
 npm、node.js、express、mongodb、vue-cli等。
 ## 目录结构
@@ -14,6 +15,7 @@ npm、node.js、express、mongodb、vue-cli等。
 │      ├─plugins        // 插件
 │      ├─router         // 后台页面路由
 │      └─views          // 后台pages
+├─dump                  // mongodb数据库文件
 ├─picture               // 预览图片
 ├─server                // 服务端目录
 │  ├─middleware         // 中间件
@@ -37,69 +39,6 @@ npm、node.js、express、mongodb、vue-cli等。
         └─views         // 前端pages
 ```
 
-## 相关依赖
-```js
-// web
-"dependencies": {
-    "axios": "^0.19.2",
-    "core-js": "^3.6.5",
-    "swiper": "^5.4.5",
-    "vue": "^2.6.11",
-    "vue-awesome-swiper": "^4.1.1",
-    "vue-router": "^3.2.0"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-plugin-eslint": "~4.4.0",
-    "@vue/cli-plugin-router": "^4.4.4",
-    "@vue/cli-service": "~4.4.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "sass": "^1.26.8",
-    "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
-  },
-```
-
-```js
-// admin
-"dependencies": {
-    "axios": "^0.19.2",
-    "core-js": "^3.6.5",
-    "element-ui": "^2.4.5",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "vue2-editor": "^2.10.2"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.4.0",
-    "@vue/cli-plugin-eslint": "~4.4.0",
-    "@vue/cli-plugin-router": "^4.4.1",
-    "@vue/cli-service": "~4.4.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-cli-plugin-element": "~1.0.1",
-    "vue-template-compiler": "^2.6.11"
-  },
-
-```
-```js
-// server
-"dependencies": {
-    "bcrypt": "^5.0.0",
-    "cors": "^2.8.5",
-    "express": "^5.0.0-alpha.8",
-    "http-assert": "^1.4.1",
-    "inflection": "^1.12.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.16",
-    "multer": "^1.4.2",
-    "require-all": "^3.0.0"
-  }
-```
-
 # 2.管理后台
 1. Element UI的后台管理基础界面搭建
 2. 分类管理
@@ -114,7 +53,8 @@ npm、node.js、express、mongodb、vue-cli等。
 11. 登录页面
 12. 登录验证 ((jwt,jsonwebtoken))
 13. 上传文件的登录校验 (el-upload, headers)
-
+14. 用户注册
+15. 用户权限限制
 # 3.移动端
 1. 常用css样式定义 (SCSS、颜色、字体、flex、边距、边框)
 ```scss
@@ -156,6 +96,7 @@ $color: (
 9. 精彩视频
 10. 图文攻略
 11. 数据录入方式
+12. 爆料站
 
 进入王者荣耀手官网，打开控制台，输入以下代码即可提取英雄数据
 ```javascript
