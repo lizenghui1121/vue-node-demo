@@ -87,14 +87,14 @@
                 <img :src="model.skills[2].icon" alt />
                 <div class="fs-xs">{{model.skills[2].name}}</div>
               </div>
-              <div class="second-skill ml-5 text-center">
-                <div class="pb-2 fs-xl">副升</div>
+              <div class="second-skill text-center">
+                <div class="pb-2 fs-xl ">副升</div>
                 <img :src="model.skills[1].icon" alt />
                 <div class="fs-xs">{{model.skills[1].name}}</div>
               </div>
-              <div class="main-skill flex-1 ml-5 text-center">
+              <div class="main-skill text-center">
                 <div class="pb-2 fs-xl">召唤师技能</div>
-                <div class="d-flex jc-between">
+                <div class="d-flex jc-center">
                   <div v-for="(summonerSkill, i) in model.summonerSkills" :key="i">
                     <img :src="summonerSkill.icon" alt />
                     <div class="fs-xs">{{summonerSkill.name}}</div>
@@ -127,10 +127,10 @@
           <!-- 铭文推荐 -->
           <m-card plain icon="menu" title="铭文推荐" class="hero-mingwens">
             <div class="d-flex jc-between">
-              <div class="d-flex jc-between" v-for="(item, i) in model.mingwens" :key="i">
+              <div class="d-flex jc-start" v-for="(item, i) in model.mingwens" :key="i">
                 <img :src="item.icon" alt="">
                 <div class="ml-2">
-                  <div class="fs-xl py-1">{{item.name}}</div>
+                  <div class="fs-lg py-1">{{item.name}}</div>
                   <p class="fs-xs my-0" v-if="item.description1">{{item.description1}}</p>
                   <p class="fs-xs my-0" v-if="item.description2">{{item.description2}}</p>
                   <p class="fs-xs my-0" v-if="item.description3">{{item.description3}}</p>
@@ -170,6 +170,7 @@
           </m-card>
         </div>
       </swiper-slide>
+
     </swiper>
   </div>
 </template>
@@ -235,11 +236,11 @@ export default {
     img.icon {
       width: 65px;
       height: 65px;
-      border: 3px solid map-get($color, "white");
+      border: 2.5px solid map-get($color, "white");
       &.active {
         border-color: map-get($color, "primary");
       }
-      border-radius: 45%;
+      border-radius: 48%;
     }
   }
   .skill-suggest {

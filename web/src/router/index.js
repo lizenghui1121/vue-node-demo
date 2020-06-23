@@ -8,6 +8,7 @@ import Strategy from '../views/Strategy.vue'
 import Main from '../views/Main.vue'
 import Article from '../views/Article.vue'
 import Hero from '../views/Hero.vue'
+import Baoliaozhan from '../views/Baoliaozhan.vue'
 
 Vue.use(VueRouter)
 
@@ -25,6 +26,7 @@ Vue.use(VueRouter)
     ]
   },
   { path: '/heroes/:id', name: 'hero', component: Hero, props: true },
+  { path: '/blz', name: 'blz', component: Baoliaozhan },
   {
     path: '/about',
     name: 'About',

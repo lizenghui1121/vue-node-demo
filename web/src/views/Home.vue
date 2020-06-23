@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="page-home">
     <swiper :options="swiperOptions" @click-slide="handleClickSlide">
       <swiper-slide>
         <img class="w-100" src="../assets/images/998eb31ae1b7511672169603a0d72b43.jpeg" alt />
@@ -16,10 +16,16 @@
 
     <div class="nav-icons bg-white mt-3 pt-3 text-center text-dark-1">
       <div class="d-flex flex-wrap" :class="canOpen?'can-open':'open'">
-        <div class="nav-item mb-3 pt-2" v-for="(item, i) in iconList" :key="i">
+        <router-link
+          tag="div"
+          :to="`/blz`"
+          class="nav-item mb-3 pt-2"
+          v-for="(item, i) in iconList"
+          :key="i"
+        >
           <i :class="`sprite sprite-${item.icon}`"></i>
           <div class="py-1">{{item.name}}</div>
-        </div>
+        </router-link>
       </div>
       <div @click="canOpen = !canOpen" class="bg-light py-2 fs-sm">
         <i class="sprite sprite-arrow mr-1" :class="{'inverse':canOpen}"></i>
@@ -95,7 +101,12 @@
         </div>
       </template>
     </m-list-card>
-    <router-link tag='div' to='/strategycenter' class="bg-white text-grey-1 text-center" style="padding: 0.75rem 0;">
+    <router-link
+      tag="div"
+      to="/strategycenter"
+      class="bg-white text-grey-1 text-center"
+      style="padding: 0.75rem 0;"
+    >
       <span class="fs-sm">加载更多内容</span>
     </router-link>
 
@@ -109,14 +120,14 @@
       <template #items="{category}">
         <div
           class="py-2 my-1 d-flex jc-start border-bottom"
-          v-for="(strategy, i) in category.strategyList"
+          v-for="(strategy, i) in category.strategyList.slice(0,4)"
           :key="i"
         >
           <router-link tag="div" :to="`/strategies/${strategy._id}`" class="pl-1 mr-3">
             <img :src="strategy.image" style="height: 70px;width: 116px;" />
           </router-link>
           <div style="width:14rem; position:relative">
-            <router-link tag='div' :to="`/strategies/${strategy._id}`">
+            <router-link tag="div" :to="`/strategies/${strategy._id}`">
               <span class="strategy-title w-100 mb-2 fs-xl">{{strategy.title}}</span>
               <span class="strategy-desc w-100 text-grey-1">{{strategy.description}}</span>
             </router-link>
@@ -227,6 +238,21 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/variables.scss";
+.page-home {
+  animation: homeshow 0.4s linear;
+
+  @keyframes homeshow {
+    from {
+      visibility: hidden;
+      transform: translateY(30%);
+    }
+
+    to {
+      visibility: visible;
+      transform: none;
+    }
+  }
+}
 .pagination-home {
   .swiper-pagination-bullet {
     border-radius: 0.1538rem;
@@ -281,5 +307,4 @@ export default {
 .inverse {
   transform: rotate(180deg);
 }
-
 </style>

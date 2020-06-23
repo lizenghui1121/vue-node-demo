@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"vue-node-demo.articles"}],"uuid":"4243d62077c148bfaacf50ecc583897a"}
