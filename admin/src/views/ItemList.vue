@@ -2,7 +2,7 @@
   <div>
     <h1>物品列表</h1>
     <el-table :data="items">
-      <el-table-column prop="_id" label="ID"></el-table-column>
+      <el-table-column class="hidden-xs-only" v-if="!isMobie" prop="_id" label="ID"></el-table-column>
       <el-table-column prop="name" label="物品名称"></el-table-column>
       <el-table-column prop="icon" label="图标">
         <template slot-scope="scope">
@@ -32,7 +32,8 @@
 export default {
   data() {
     return {
-      items: []
+      items: [],
+     
     };
   },
   methods: {
@@ -65,6 +66,7 @@ export default {
   },
   created() {
     this.getCategoryList();
+    
   }
 };
 </script>

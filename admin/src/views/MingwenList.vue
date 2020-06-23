@@ -2,7 +2,7 @@
   <div>
     <h1>铭文列表</h1>
     <el-table :data="items">
-      <el-table-column prop="_id" label="ID"></el-table-column>
+      <el-table-column v-if="!isMobie" prop="_id" label="ID"></el-table-column>
       <el-table-column prop="name" label="铭文名称"></el-table-column>
       <el-table-column prop="icon" label="图标">
         <template slot-scope="scope">
@@ -65,6 +65,7 @@ export default {
   },
   created() {
     this.getCategoryList();
+    // window.addEventListener('resize', this.handleResize)
   }
 };
 </script>

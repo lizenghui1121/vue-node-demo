@@ -11,6 +11,11 @@ import http from './http'
 Vue.prototype.$http = http
 
 Vue.mixin({
+  data() {
+    return {
+      isMobie: false,
+    }
+  },
   computed: {
     uploadUrl() {
       return this.$http.defaults.baseURL + '/upload'
@@ -22,6 +27,9 @@ Vue.mixin({
         Authorization: `Bearer ${localStorage.token || ''}`
       }
     }
+  },
+  created() {
+    this.isMobie = document.body.clientWidth < 768
   }
 })
 

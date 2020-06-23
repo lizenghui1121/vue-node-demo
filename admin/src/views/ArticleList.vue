@@ -2,7 +2,7 @@
   <div>
     <h1>文章列表</h1>
     <el-table :data="items">
-      <el-table-column prop="_id" label="ID"></el-table-column>
+      <el-table-column v-if="!isMobie" prop="_id" label="ID"></el-table-column>
       <el-table-column prop="title" label="文章名称"></el-table-column>
       <el-table-column fixed="right" label="操作" width="100">
         <template slot-scope="scope">
