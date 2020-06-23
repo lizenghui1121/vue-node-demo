@@ -1,7 +1,7 @@
 # vue-node-demo
 Vue.js+Node.js+Element-ui实现仿王者荣耀手机端官网
-- web端demo：[点击访问demo](101.200.226.252)
-- 后台demo：[点击访问demo](101.200.226.252/admin)
+- web端demo：[点击访问demo](http://101.200.226.252)
+- 后台demo：[点击访问demo](http://101.200.226.252/admin)
 # 1.环境安装
 npm、node.js、express、mongodb、vue-cli等。
 ## 目录结构

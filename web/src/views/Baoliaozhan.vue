@@ -41,10 +41,10 @@
       <div class="my-3 pt-3 bg-dark-2 text-center" v-for="(banner, i) in bannerList" :key="i">
         <b class="text-primary fs-xl my-">{{banner.type}}</b>
         <div class="text-light-2 my-2">{{banner.title}}</div>
-        <div class="my-3">
+        <div class="my-3 mx-3">
           <img
-            class="mx-3 mb-3"
-            style="height:191.5px "
+            class="mb-3 w-100"
+            style="height:191.5px;"
             :src="banner.icon"
             alt
           />
