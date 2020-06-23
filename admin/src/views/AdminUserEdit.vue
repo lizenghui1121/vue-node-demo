@@ -6,7 +6,7 @@
       <el-form-item label="用户名">
         <el-input v-model="model.username"></el-input>
       </el-form-item>
-      <el-form-item label="密码">
+      <el-form-item :label="id ? '新密码': '密码'">
         <el-input type="text" v-model="model.password"></el-input>
       </el-form-item>
       <el-form-item>

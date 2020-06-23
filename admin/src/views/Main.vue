@@ -1,6 +1,6 @@
 <template>
   <el-container style="height: 100vh;">
-    <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+    <el-aside width="180px" style="background-color: rgb(238, 241, 246)">
       <el-menu router unique-opened :default-active="$route.path">
         <el-submenu index="1">
           <template slot="title">
@@ -73,16 +73,19 @@
     </el-aside>
 
     <el-container>
-      <el-header style="text-align: right; font-size: 12px">
-        <el-dropdown>
-          <i class="el-icon-setting" style="margin-right: 15px"></i>
+      <el-header style="text-align: right; font-size: 14px; padding-right:40px;">
+        <span>欢迎您，{{currentUser}}</span>
+        <el-dropdown @command="handleCommand">
+          <i class="el-icon-caret-bottom" style="margin-left: 8px"></i>
           <el-dropdown-menu slot="dropdown">
-            <el-dropdown-item>查看</el-dropdown-item>
-            <el-dropdown-item>新增</el-dropdown-item>
-            <el-dropdown-item>删除</el-dropdown-item>
+            <el-dropdown-item command="userEdit">
+              <i class="el-icon-setting" style="margin-right: 8px"></i>修改密码
+            </el-dropdown-item>
+            <el-dropdown-item command="exit">
+              <i class="el-icon-delete" style="margin-right: 8px"></i>退出登录
+            </el-dropdown-item>
           </el-dropdown-menu>
         </el-dropdown>
-        <span>王小虎</span>
       </el-header>
 
       <el-main>
@@ -91,6 +94,9 @@
     </el-container>
   </el-container>
 </template>
+
+  
+
 
 <style>
 .el-header {
@@ -115,6 +121,28 @@ export default {
     return {
       tableData: Array(20).fill(item)
     };
+  },
+  computed: {
+    currentUser(){
+      return localStorage.currentUser
+    },
+    userId() {
+      return localStorage.userId
+    }
+  },
+  methods: {
+    handleCommand(command) {
+      switch (command) {
+        case "userEdit": 
+          console.log(this.userId)
+          this.$router.push(`/admin_users/edit/${this.userId}`);
+          break
+        case "exit":
+          localStorage.clear()
+          this.$router.push("/login")
+          break
+      }
+    }
   }
 };
 </script>

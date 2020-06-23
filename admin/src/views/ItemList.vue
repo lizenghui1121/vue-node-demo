@@ -2,7 +2,7 @@
   <div>
     <h1>物品列表</h1>
     <el-table :data="items">
-      <el-table-column prop="_id" label="ID" width="230"></el-table-column>
+      <el-table-column prop="_id" label="ID"></el-table-column>
       <el-table-column prop="name" label="物品名称"></el-table-column>
       <el-table-column prop="icon" label="图标">
         <template slot-scope="scope">
@@ -42,7 +42,7 @@ export default {
       });
     },
     remove(row) {
-      this.$confirm(`是否确定删除分类"${row.name}"`, '提示', {
+      this.$confirm(`是否确定删除装备"${row.name}"`, '提示', {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'warning'

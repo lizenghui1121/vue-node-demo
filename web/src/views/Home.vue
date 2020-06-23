@@ -88,7 +88,7 @@
             v-for="(video, i) in category.videoList"
             :key="i"
           >
-            <img :src="video.image" alt class="w-100" style="height: 95px; width:168px;" />
+            <img :src="video.image" alt class="w-100" style="height: 95px; width:165px;" />
             <div class="video-title my-2 text-grey-1" style="width: 98%">{{video.title}}</div>
             <div class="v_info d-flex jc-between">
               <span class="v_num fs-xs text-grey ml-2">

@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../views/Login.vue'
+import Registry from '../views/Registry.vue'
 import Main from '../views/Main.vue'
 import CategoryEdit from '../views/CategoryEdit.vue'
 import CategoryList from '../views/CategoryList.vue'
@@ -39,7 +40,8 @@ VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
 }
 const routes = [
-  {path: '/login', name: 'Login', component: Login, meta: {isPublic: true}},
+  {path: '/login', name: 'login', component: Login, meta: {isPublic: true}},
+  {path: '/registry', name: 'registry', component: Registry, meta: {isPublic: true}},
   {
     path: '/',
     name: 'Main',
